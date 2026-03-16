@@ -1,0 +1,33 @@
+body{
+text-align:center;
+background:rgb(95, 204, 231);
+height:100vh;
+display:flex;
+flex-direction:column;  
+justify-content:center;
+align-items:center;
+}
+
+input{
+padding:10px;
+font-size:16px;
+border-radius:7px;
+border-bottom: 30px;
+}
+
+button{
+padding:10px;
+font-size:15px;
+cursor:pointer;
+margin-top:25px;
+color: rgb(55, 32, 125);
+border-radius: 7px;
+}
+
+#meteo{
+margin-top:40px;
+background:white;
+padding:20px;
+border-radius:7px;
+width:250px;
+}
