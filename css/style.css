@@ -1,11 +1,15 @@
 body{
 text-align:center;
-background:rgb(95, 204, 231);
 height:100vh;
 display:flex;
 flex-direction:column;  
 justify-content:center;
 align-items:center;
+
+background-image: url("../image/img.PNG"); /* image */
+background-size: cover; /*tout l'écran */
+background-repeat: no-repeat; /* pas de répétition */
+background-position: center; 
 }
 
 input{
@@ -13,6 +17,11 @@ padding:10px;
 font-size:16px;
 border-radius:7px;
 border-bottom: 30px;
+}
+
+h1{
+margin-bottom:  40px;
+color: rgb(7, 4, 7);
 }
 
 button{
@@ -26,8 +35,15 @@ border-radius: 7px;
 
 #meteo{
 margin-top:40px;
-background:white;
+background:rgb(220, 245, 244);
 padding:20px;
 border-radius:7px;
 width:250px;
+font-weight: 600;
+}
+
+#Icon{
+    border-radius: 9px;
+    border: 1px solid;
+    color: rgb(164, 209, 216);
 }

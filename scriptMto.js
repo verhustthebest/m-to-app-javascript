@@ -1,13 +1,13 @@
-// ==========================
-// Sélection des éléments HTML (DOM)
-// ==========================
 
+// Select élément
 const InputVille = document.getElementById("ville")
 const recherchBtn = document.getElementById("recherch")
 const villeName = document.getElementById("villeName")
 const temperature = document.getElementById("temperature")
 const description = document.getElementById("description")
 const humidity = document.getElementById("humidity")
+const longitude = document.getElementById("longitude")
+const latitude = document.getElementById("latitude")
 const wind = document.getElementById("wind")
 const icon = document.getElementById("Icon")
 
@@ -35,19 +35,22 @@ if(data.cod == 404){
 alert("Ville non trouvée")
 return
 }
+InputVille.focus() //Fixer le curseur dans l'input
 
 //View
 villeName.textContent = data.name
 
 temperature.textContent = "Temperature : " + data.main.temp + " °C"
 
-description.textContent = "Condition : " + data.weather[0].description
+longitude.textContent = "Longitude : " + data.coord.lon.toFixed(6)
+
+latitude.textContent = "Latitude : " + data.coord.lat.toFixed(6)
 
 humidity.textContent = "Humidité : " + data.main.humidity + "%"
 
 wind.textContent = "Vent : " + data.wind.speed + " m/s"
 
-//Icone mééo
+//Icone météo
 const iconCode = data.weather[0].icon
 icon.src = `https://openweathermap.org/img/wn/${iconCode}@2x.png`
 }
@@ -59,4 +62,5 @@ getmeteo(ville)
 
 //Clear input after view informations
 InputVille.value = ""
+InputVille.focus() //Fixer le curseur dans l'input
 })
