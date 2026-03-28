@@ -26,10 +26,6 @@ alert("Veuillez entrer une ville")
 return
 }
 
-
-
-
-
 // URL API
 const url = `https://api.openweathermap.org/data/2.5/weather?q=${ville}&appid=${apiKey}&units=metric`
 

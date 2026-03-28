@@ -6,61 +6,88 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 
-background-image: url("../image/background.png.png"); /* image */
+/* FIX image */
+background-image: url("../image/background.png.png");
 background-size: 200% 200%; 
-background-repeat: no-repeat; /* pas de répétition */
+background-repeat: no-repeat;
 background-position: center; 
+
 animation: moveBg 10s infinite alternate;
+
+padding: 20px;
 }
 
+/* animation */
 @keyframes moveBg{
-    0%{
-        background-position: left;
-    }
-    100%{
-        background-position: right;
-    }
+0%{background-position:left;}
+100%{background-position:right;}
 }
 
-
-
-
-
-
-
-
+/* INPUT */
 input{
-padding:10px;
+padding:12px;
 font-size:16px;
 border-radius:7px;
-border-bottom: 30px;
+width: 90%;              /* ✅ ajout */
+max-width: 300px;        /* ✅ limite */
+margin-bottom: 10px;
 }
 
+/* TITRE */
 h1{
-margin-bottom:  40px;
+margin-bottom:40px;
 color: rgb(7, 4, 7);
 }
 
+/* BOUTONS */
 button{
 padding:10px;
 font-size:15px;
 cursor:pointer;
-margin-top:25px;
-color: rgb(55, 32, 125);
-border-radius: 7px;
+margin-top:15px;
+border-radius:7px;
+width: 90%;              /* ✅ mobile friendly */
+max-width: 200px;
+}
+
+/* METEO CARD */
+#meteo{
+margin-top:40px;
+background:rgba(255,255,255,0.8); /* ✅ plus lisible */
+padding:20px;
+border-radius:10px;
+
+width: 90%;              /* ✅ RESPONSIVE */
+max-width: 350px;        /* ✅ limite desktop */
+
+font-weight:600;
+}
+
+/* ICON */
+#Icon{
+border-radius:9px;
+border:1px solid;
+}
+
+   /* MOBILE  */
+@media (max-width:600px){
+
+h1{
+font-size:20px;
+}
+
+input{
+width:100%;
+font-size:18px;
+}
+
+button{
+width:100%;
+font-size:18px;
 }
 
 #meteo{
-margin-top:40px;
-background:rgb(220, 245, 244);
-padding:20px;
-border-radius:7px;
-width:250px;
-font-weight: 600;
+width:100%;
 }
 
-#Icon{
-    border-radius: 9px;
-    border: 1px solid;
-    color: rgb(164, 209, 216);
 }
