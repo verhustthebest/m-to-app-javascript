@@ -7,10 +7,27 @@ justify-content:center;
 align-items:center;
 
 background-image: url("../image/background.png.png"); /* image */
-background-size: cover; /*tout l'écran */
+background-size: 200% 200%; 
 background-repeat: no-repeat; /* pas de répétition */
 background-position: center; 
+animation: moveBg 10s infinite alternate;
 }
+
+@keyframes moveBg{
+    0%{
+        background-position: left;
+    }
+    100%{
+        background-position: right;
+    }
+}
+
+
+
+
+
+
+
 
 input{
 padding:10px;
