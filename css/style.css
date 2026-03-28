@@ -6,7 +6,7 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 
-background-image: url("../image/img.PNG"); /* image */
+background-image: url("../image/background.png.png"); /* image */
 background-size: cover; /*tout l'écran */
 background-repeat: no-repeat; /* pas de répétition */
 background-position: center; 
