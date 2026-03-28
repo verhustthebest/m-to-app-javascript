@@ -12,12 +12,8 @@ const wind = document.getElementById("wind")
 const icon = document.getElementById("Icon")
 const loader = document.getElementById("loader") //Loader
 
-//Loader
-loader.style.display = "block" 
-
 // key API
 const apiKey = "c023db05a5c33ac611407204fdac4454"
-
 async function getmeteo(ville){
 
 //If ville est vide
@@ -28,22 +24,18 @@ return
 
 // URL API
 const url = `https://api.openweathermap.org/data/2.5/weather?q=${ville}&appid=${apiKey}&units=metric`
-
 //Appel API
 const response = await fetch(url)
 const data = await response.json()
 
 //If ville incorrecte
 if(data.cod == 404){
-alert("Ville non trouvée")
+alert(`La ville de ` + ville + ` est non trouvée`)
 return
 }
 InputVille.focus() //Fixer le curseur dans l'input
-
-
+// Loader
 loader.style.display = "none"
-
-
 
 //View
 villeName.textContent = data.name

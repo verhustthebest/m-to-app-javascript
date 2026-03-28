@@ -67,7 +67,9 @@ font-weight:600;
 #Icon{
 border-radius:9px;
 border:1px solid;
+color: rgb(154, 229, 204);
 }
+
 
    /* MOBILE  */
 @media (max-width:600px){
